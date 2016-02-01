@@ -1,3 +1,13 @@
+"""Convert from Markdown to OpenOffice for Linux Magazine.
+
+Usage:
+
+    python markdow_to_glmf.py somedocument.md
+
+This generates `somedocument.odt`.
+
+"""
+
 import os
 import os.path as op
 import re
@@ -115,4 +125,4 @@ def gen_odt(filename):
 
 if __name__ == '__main__':
     import sys
-    gen_odt(sys.argv[1] + '.md')
+    gen_odt(sys.argv[1])
