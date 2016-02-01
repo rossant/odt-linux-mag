@@ -1,10 +1,17 @@
 """Convert from Markdown to OpenOffice for Linux Magazine.
 
+Installation:
+
+    pip install ipymd
+    pip install odfpy
+
 Usage:
 
     python markdow_to_glmf.py somedocument.md
 
 This generates `somedocument.odt`.
+
+Note: the conversion code lives in the ipymd repo at https://github.com/rossant/ipymd
 
 """
 
