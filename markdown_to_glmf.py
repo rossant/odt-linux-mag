@@ -4,6 +4,8 @@ Installation:
 
     pip install ipymd
     pip install odfpy
+    git clone https://gist.github.com/99a2316465c84192b630.git md2glmf
+    cd md2glmf
 
 Usage:
 
