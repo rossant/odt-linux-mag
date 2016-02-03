@@ -1,5 +1,10 @@
 """Convert from Markdown to OpenOffice for Linux Magazine.
 
+Requirements:
+
+* Python 3+ (doesn't seem to work on Python 2 because of odfpy)
+* Latest IPython and Jupyter
+
 Installation:
 
     pip install ipymd
