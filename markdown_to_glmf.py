@@ -7,8 +7,7 @@ Requirements:
 
 Installation:
 
-    pip install ipymd
-    pip install odfpy
+    pip install traitlets jupyter_client nbformat notebook
     git clone https://gist.github.com/99a2316465c84192b630.git md2glmf
     cd md2glmf
 
@@ -26,6 +25,7 @@ import os
 import os.path as op
 import re
 import sys
+import codecs
 
 from ipymd import convert
 from ipymd.core.prompt import SimplePromptManager, PythonPromptManager
@@ -60,7 +60,7 @@ mapping = {'normal-paragraph': 'Normal',
 
 
 def _read_md(path):
-    with open(path, 'r') as f:
+    with codecs.open(path, 'r', encoding='utf-8') as f:
         return f.read()
 
 
@@ -74,6 +74,8 @@ class GLMFODFRenderer(ODFRenderer):
             style = 'Signature'
         elif head[0] == 'pragma':
             style = 'pragma'
+        elif head[0] == 'console':
+            style = 'console'
         elif head[0] == 'legende':
             style = 'legende'
         else:
